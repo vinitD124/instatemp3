@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        *::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            border: 4px solid transparent;
+            /* background-color: rgba(0, 0, 0, 0.032); */
+            background-clip: content-box;
+        }
+
+
+        *::-webkit-scrollbar {
+            background-color: transparent;
+            width: 15px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        body {
+            height: 100vh;
+            background-color: rgb(240, 240, 240);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: overlay;
+        }
+
+
+        .container {
+            width: 350px;
+            max-width: 100%;
+            height: 90%;
+            background-color: red;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .top {
+            width: 100%;
+            height: 10vh;
+            background-color: rgb(255, 255, 0);
+           
+        }
+
+        .centre {
+            background-color: antiquewhite;
+            width: 100%;
+            /* flex-grow: 1; */
+            flex: 1;
+            overflow-y: scroll;
+            font-size: 50px;
+        }
+
+        .bottom {
+            width: 100%;
+            height: 10vh;
+            background-color: rgb(0, 255, 0);
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="centre">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aperiam placeat repellendus dicta hic non
+            ducimus vitae esse accusantium. Rerum nihil sequi voluptatum, doloremque iusto assumenda eaque eum sapiente
+            ducimus debitis facilis officia eligendi a nemo pariatur officiis suscipit quidem, hic odit vero dolore
+            nulla! Quasi earum accusantium animi dolores sapiente a, mollitia quam? Laudantium recusandae consectetur
+            facilis dolor, dolore quae voluptatibus ipsa nesciunt iusto fuga aliquid quaerat. Sequi neque distinctio
+            possimus corporis perferendis asperiores doloremque quis, optio sunt error earum aliquam porro aperiam
+            placeat, quia minima. Provident ipsa, tenetur iste laudantium, aperiam ullam suscipit sunt neque incidunt
+            aliquid ut.
+        </div>
+        <div class="bottom"></div>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
